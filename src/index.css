@@ -53,6 +53,12 @@
   border: 1px solid rgba(71, 85, 105, 0.4);
 }
 
+@layer base {
+  .glass:focus-within {
+    z-index: 50;
+  }
+}
+
 @utility font-display {
   font-family: var(--font-display);
 }

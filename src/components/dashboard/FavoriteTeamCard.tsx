@@ -16,9 +16,10 @@ import { formatGameProgress } from '../../utils/gameStatus';
 
 interface Props {
   team: TeamConfig;
+  style?: React.CSSProperties;
 }
 
-export function FavoriteTeamCard({ team }: Props) {
+export function FavoriteTeamCard({ team, style }: Props) {
   const { data, isLoading, isError } = useTeamData(team);
 
   if (isLoading) return <SkeletonCard />;
@@ -44,6 +45,7 @@ export function FavoriteTeamCard({ team }: Props) {
       className="glass rounded-2xl p-5 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg group"
       style={
         {
+          ...style,
           '--team-color': team.colors.accent,
           borderImage: `linear-gradient(135deg, ${team.colors.accent}40, transparent 60%) 1`,
         } as React.CSSProperties

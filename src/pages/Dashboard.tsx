@@ -21,8 +21,12 @@ export default function Dashboard() {
       <NextGameCountdown />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {FAVORITE_TEAMS.map((team) => (
-          <FavoriteTeamCard key={`${team.league}-${team.espnId}`} team={team} />
+        {FAVORITE_TEAMS.map((team, i) => (
+          <FavoriteTeamCard
+            key={`${team.league}-${team.espnId}`}
+            team={team}
+            style={{ zIndex: FAVORITE_TEAMS.length - i }}
+          />
         ))}
       </div>
 

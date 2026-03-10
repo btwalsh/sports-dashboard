@@ -7,7 +7,7 @@ interface Props {
 
 export function AddToCalendarIcon({ event }: Props) {
   return (
-    <div className="inline-flex [&>div]:!shadow-none">
+    <div className="inline-flex overflow-visible [&>div]:!shadow-none">
       <AddToCalendarButton
         name={event.name}
         startDate={event.startDate}
