@@ -1,0 +1,1 @@
+function l(i,r){const e=i.type?.shortDetail??i.type?.detail;if(r==="mlb"||r==="baseball")return e??"";const o=[];return i.displayClock&&o.push(i.displayClock),i.period!=null&&o.push(`P${i.period}`),o.join(" · ")||e||""}export{l as f};
